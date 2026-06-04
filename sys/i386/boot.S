@@ -7,7 +7,6 @@
 
 .section .multiboot, "aw"
 .globl mbheader
-.type mbheader, @object
 .align 4096
 mbheader:
     .long MULTIBOOT_MAGIC
@@ -17,10 +16,8 @@ mbheader:
 
 
 .globl _higherhalf_start
-.type _higherhalf_start, @function
 
 .globl _start
-.type _start, @function
 /*
  * mkneo Entry point for i386
  */
@@ -76,6 +73,7 @@ _gdtr:
 .section .text
 
 .extern archentry
+.extern i386_init_idt
 
 _higherhalf_start:
     mov $_gdtr, %eax
@@ -87,7 +85,9 @@ _higherhalf_start:
     mov %ax, %fs
     mov %ax, %gs
     ljmp $0x08,$.pm
-.pm:    
+.pm:
+    call i386_init_idt
     call archentry
     cli
     hlt
+

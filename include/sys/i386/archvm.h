@@ -15,3 +15,4 @@
 #define PT(a, f)    (((a) & ~0xFFF) | (f))
 
 #endif /*_SYS_I386_ARCHVM_H*/
+

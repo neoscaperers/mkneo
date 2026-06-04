@@ -128,3 +128,4 @@ void kern_printf(const char* fmt, ...) {
     vaprintf(fmt, args, kern_putc, kern_puts);
     va_end(args);
 }
+

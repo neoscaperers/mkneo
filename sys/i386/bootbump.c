@@ -13,3 +13,4 @@ void* boot_bump(size_t amount, size_t align) {
     bump_amount += amount;
     return ptr;
 }
+

@@ -6,3 +6,4 @@ void* memset(void* dest, register int val, register size_t len) {
         *ptr++ = val;
     return dest;
 }
+

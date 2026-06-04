@@ -45,8 +45,11 @@ struct mb_header {
     /* We care not for anything else beyond this. */
 };
 
-void boot_creatept(struct mb_header* hdr);
+struct boot_s;
+
+void boot_creatept(struct mb_header* hdr, struct boot_s* bootstruct);
 
 #endif /*_ASM*/
 
 #endif /*_SYS_I386_MULTIBOOT_H*/
+

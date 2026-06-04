@@ -21,3 +21,4 @@ void kern_puts(const char* s);
 void kern_printf(const char* fmt, ...);
 
 #endif /*_SYS_KCONS_H*/
+

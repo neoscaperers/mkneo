@@ -7,3 +7,4 @@
 int init_devcons(void);
 
 #endif /*_SYS_I386_DEVCONS_H*/
+

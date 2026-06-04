@@ -41,3 +41,4 @@ struct kcons_dev serialdev = {
 
 struct kcons_dev* kcons_main = &serialdev;
 struct kcons_dev* kcons_debug = &serialdev;
+

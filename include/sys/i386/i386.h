@@ -6,12 +6,12 @@
 #define COM0    0x3F8
 
 __attribute__((always_inline)) inline void outb(uint16_t p, uint8_t v) {
-    asm volatile ("outb %b0, %w1" ::"a"(v), "Nd"(p));
+    __asm__ volatile ("outb %b0, %w1" ::"a"(v), "Nd"(p));
 }
 
 __attribute__((always_inline)) inline uint8_t inb(uint16_t p) {
     uint8_t r;
-    asm volatile ("inb %w1, %b0" :"=a"(r) :"Nd"(p));
+    __asm__ volatile ("inb %w1, %b0" :"=a"(r) :"Nd"(p));
     return r;
 }
 
