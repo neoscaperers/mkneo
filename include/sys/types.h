@@ -16,7 +16,7 @@ typedef uint64_t mk_tag_t;
 
 typedef size_t limit_t;
 typedef intptr_t virt_t;
-typedef uint64_t phys_t;
+typedef intptr_t phys_t;
 
 typedef int mutex_t;
 

@@ -4,7 +4,7 @@ CCARGS 	= -I$(TOPSRC)/include -I$(TOPSRC)/include/sys/$(ARCH) -Werror -Wall \
 			-Wpedantic -ffreestanding -fno-ident -D_KERNEL
 LDARGS 	= -nostdlib -s -S -A $(ARCH)
 
-SRCS	= kern/kern_init.c kern/kern_console.c libkern/memory.c vm/vm_init.c
+SRCS	= kern/kern_init.c kern/kern_console.c libkern/memory.c mm/mm_init.c mm/mm_buddy.c
 SSRCS	= 
 export 
 include $(TOPSRC)/sys/$(ARCH)/Makefile
